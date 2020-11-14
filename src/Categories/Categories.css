@@ -1,0 +1,29 @@
+.categories {
+  width: 100%;
+  padding: 0 2%;
+  box-sizing: border-box;
+  border-top: outset;
+  text-align: left;
+}
+
+.categories p {
+  margin: 1.6%;
+  font-size: 1.2rem;
+}
+
+.categories .items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.categories span {
+  font-size: 1rem;
+  padding: 1.8%;
+  line-height: .9;
+}
+
+.categories span:hover {
+  background-color: rgb(196, 196, 196);
+  border-radius: 5%;
+}

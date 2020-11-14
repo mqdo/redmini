@@ -1,0 +1,39 @@
+.bar {
+  width: 100%;
+  max-height: 30%;
+  padding: 0 2%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: inset;
+}
+
+.bar img {
+  max-width: 50%;
+  height: auto;
+}
+
+.bar div {
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+
+.bar label {
+  position: absolute;
+  color: grey;
+  font-size: 1.5rem;
+  min-width: 5%;
+  padding: .4%;
+}
+
+.bar input {
+  width: 10%;
+  padding: 3%;
+  border: none;
+}
+
+.bar input:focus {
+  width: 100%;
+}
