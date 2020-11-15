@@ -1,10 +1,9 @@
 .categories {
   width: 100%;
-  padding: 0 2%;
+  padding: 2%;
   box-sizing: border-box;
   border-top: outset;
   text-align: left;
-  border-radius: 3% 3% 0 0;
   background-color: rgba(196, 196, 196, 0.062);
 }
 

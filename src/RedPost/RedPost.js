@@ -15,7 +15,7 @@ export const RedPost = () => {
             <i className="material-icons">expand_more</i>
           </button>
         </div>
-        <div className="status postby">
+        <div className="status posted">
           <p>Posted by r/dragoneyes</p>
         </div>
         <div className="status time">
@@ -49,7 +49,7 @@ export const RedPost = () => {
             <i className="material-icons">expand_more</i>
           </button>
         </div>
-        <div className="status postby">
+        <div className="status posted">
           <p>Posted by r/meatball</p>
         </div>
         <div className="status time">
@@ -75,7 +75,7 @@ export const RedPost = () => {
             <i className="material-icons">expand_more</i>
           </button>
         </div>
-        <div className="status postby">
+        <div className="status posted">
           <p>Posted by r/meatball</p>
         </div>
         <div className="status time">

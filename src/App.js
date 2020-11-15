@@ -7,6 +7,9 @@ function App() {
     <div>
       <SearchBar />
       <Main />
+      <div className="footer">
+        <p>Redmini by <a href="https://github.com/mqdo">mquan</a>.</p>
+      </div>
     </div>
   );
 }
