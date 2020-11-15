@@ -4,11 +4,14 @@
   box-sizing: border-box;
   border-top: outset;
   text-align: left;
+  border-radius: 3% 3% 0 0;
+  background-color: rgba(196, 196, 196, 0.062);
 }
 
 .categories p {
   margin: 1.6%;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .categories .items {

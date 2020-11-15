@@ -36,4 +36,6 @@
 
 .bar input:focus {
   width: 100%;
+  outline: none;
+  background-color: rgba(196, 196, 196, 0.062);;
 }
