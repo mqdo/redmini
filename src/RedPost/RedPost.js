@@ -4,7 +4,7 @@ import pic from "../pic.jpg";
 
 export const RedPost = () => {
   return (
-    <div className="post-container">
+    <div className="container">
       <div className="posts" key="1">
         <div className="votes">
           <button className="arrow-up">
@@ -26,7 +26,7 @@ export const RedPost = () => {
             <i className="material-icons">comment</i>
           </button>
         </div>
-        <div className="post">
+        <div className="article">
           <h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
             urna elit, commodo ac turpis vitae, eleifend pharetra metus.
@@ -60,7 +60,7 @@ export const RedPost = () => {
             <i className="material-icons">comment</i>
           </button>
         </div>
-        <div className="post">
+        <div className="article">
           <h2>Vacation</h2>
           <img src={pic} alt="" />
         </div>
@@ -86,7 +86,7 @@ export const RedPost = () => {
             <i className="material-icons">comment</i>
           </button>
         </div>
-        <div className="post">
+        <div className="article">
           <h2>How are you?</h2>
         </div>
       </div>

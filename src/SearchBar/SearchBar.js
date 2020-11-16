@@ -5,8 +5,8 @@ export const SearchBar = () => {
   return (
     <div className="bar">
       <img title="logo" src={logo} alt="redmini" />
-      <div>
-        <input type="text" id="search" />
+      <div className="search-bar">
+        <input type="text" id="search" placeholder="     Search..." />
         <label htmlFor="search">
           <i className="material-icons">search</i>
         </label>

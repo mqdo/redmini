@@ -4,11 +4,13 @@
 }
 
 .footer {
+  clear: both;
   color: #bebebe;
-  background-color: rgba(196, 196, 196, 0.062);
   padding: 2%;
   text-align: right;
   font-size: .8rem;
+  border-top: outset;
+  margin-top: 2%;
 }
 
 .footer a {
@@ -17,3 +19,4 @@
   font-size: .9rem;
   font-weight: 700;
 }
+

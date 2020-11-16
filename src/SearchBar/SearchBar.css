@@ -14,7 +14,7 @@
   height: auto;
 }
 
-.bar div {
+.bar .search-bar {
   display: flex;
   justify-content: flex-end;
   box-sizing: border-box;
@@ -23,19 +23,80 @@
 .bar label {
   position: absolute;
   color: grey;
-  font-size: 1.5rem;
   min-width: 5%;
   padding: .4%;
+}
+
+.bar i {
+  font-size: 1.5rem;
 }
 
 .bar input {
   width: 10%;
   padding: 3%;
   border: none;
+  overflow: hidden;
+  text-align: center;
 }
 
 .bar input:focus {
   width: 100%;
   outline: none;
-  background-color: rgba(196, 196, 196, 0.062);;
+}
+
+@media (min-width: 600px) {
+  .bar {
+    max-height: 30%;
+  }
+
+  .bar img {
+    max-width: 30%;
+  }
+
+  .bar .search-bar {
+    min-width: 40%;
+  }
+
+  .bar label {
+    padding: .2%;
+  }
+
+  .bar i {
+    font-size: 1.8rem;
+  }
+
+  .bar input {
+    width: 100%;
+    padding: 3%;
+    background-color: rgba(196, 196, 196, 0.116);
+  }
+}
+
+@media (min-width: 1024px) {
+  .bar {
+    max-height: 20%;
+    padding: 0 12%;
+  }
+
+  .bar img {
+    max-width: 20%;
+  }
+
+  .bar .search-bar {
+    min-width: 30%;
+  }
+
+  .bar label {
+    padding: .2%;
+    right: 9%;
+  }
+
+  .bar i {
+    font-size: 1.8rem;
+  }
+
+  .bar input {
+    width: 100%;
+    padding: 2.3%;
+  }
 }

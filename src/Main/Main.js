@@ -3,9 +3,9 @@ import { Categories } from "../Categories/Categories";
 
 export const Main = () => {
   return (
-    <div className="main_page">
-      <RedPost />
+    <div className="main-page">
       <Categories />
+      <RedPost /> 
     </div>
   );
 };
