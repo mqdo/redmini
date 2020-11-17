@@ -1,6 +1,8 @@
+import React from "react";
+
 import "./RedPost.css";
 
-import pic from "../pic.jpg";
+import pic from "../../pic.jpg";
 
 export const RedPost = () => {
   return (

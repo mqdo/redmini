@@ -1,10 +1,10 @@
 .categories {
   width: 100%;
-  padding: 2%;
+  padding: 2% 0;
   box-sizing: border-box;
   border-top: outset;
-  text-align: left;
-  background-color: rgba(196, 196, 196, 0.062);
+  text-align: center;
+  background-color: rgb(196, 196, 196, 0.062);
 }
 
 .categories p {
@@ -14,19 +14,39 @@
 }
 
 .categories .items {
+  position: absolute;
+  left: 0;
+  background-color: rgb(252, 252, 252);
   display: none;
+  z-index: 10;
 }
 
-.categories:hover .items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
+.categories:hover .animated {
+  display: block;
+  margin: 2%;
+}
+
+.categories .menu {
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 
 .categories button {
   font-size: 1rem;
-  padding: 1.8%;
-  line-height: .9;
+  padding: 5%;
+  line-height: 0.9;
   border: none;
   outline: none;
   background-color: transparent;
@@ -34,13 +54,12 @@
 
 .categories button:hover {
   background-color: rgb(196, 196, 196);
-  border-radius: 5%;
 }
 
 @media (min-width: 600px) {
   .categories {
     float: right;
-    width: 18%;
+    width: 21%;
     border-top: none;
     border-left: outset;
     border-bottom: inset;
@@ -51,6 +70,11 @@
   .categories .items {
     display: flex;
     flex-direction: column;
+  }
+
+  .categories:hover .animated,
+  .categories .menu {
+    all: unset;
   }
 
   .categories button {
@@ -65,7 +89,7 @@
 
 @media (min-width: 1024px) {
   .categories {
-    width: 12%;
+    width: 15%;
     margin-right: 12%;
   }
 }

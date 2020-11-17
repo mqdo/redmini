@@ -20,11 +20,13 @@
   box-sizing: border-box;
 }
 
-.bar label {
+.bar button {
   position: absolute;
   color: grey;
+  background-color: transparent;
   min-width: 5%;
-  padding: .4%;
+  outline: none;
+  border: none;
 }
 
 .bar i {
@@ -32,11 +34,14 @@
 }
 
 .bar input {
+  display: block;
   width: 10%;
   padding: 3%;
   border: none;
-  overflow: hidden;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .bar input:focus {
@@ -55,10 +60,6 @@
 
   .bar .search-bar {
     min-width: 40%;
-  }
-
-  .bar label {
-    padding: .2%;
   }
 
   .bar i {
@@ -84,11 +85,6 @@
 
   .bar .search-bar {
     min-width: 30%;
-  }
-
-  .bar label {
-    padding: .2%;
-    right: 9%;
   }
 
   .bar i {
