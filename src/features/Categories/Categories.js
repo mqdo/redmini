@@ -1,11 +1,13 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import "./Categories.css";
-import { changeActivate } from "./categorySlice";
+import { changeActive } from "../Main/redpostSlice";
 
 export const Categories = () => {
   const dispatch = useDispatch();
+
+  let active = useSelector((state) => state.redposts.active);
 
   return (
     <div className="categories">
@@ -14,8 +16,11 @@ export const Categories = () => {
         {subreddits.map((sub) => {
           return (
             <button
-              key={subreddits.indexOf(sub)}
-              onClick={() => dispatch(changeActivate({ sub }))}
+              key={sub}
+              className={sub === active ? "selected" : "non"}
+              onClick={() => {
+                dispatch(changeActive(sub));
+              }}
             >
               {sub}
             </button>

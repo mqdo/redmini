@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import categoryReducer from "../features/Categories/categorySlice";
+import redpostReducer from "../features/Main/redpostSlice";
 
 export default configureStore({
   reducer: {
-    categories: categoryReducer,
+    redposts: redpostReducer,
   }
 });

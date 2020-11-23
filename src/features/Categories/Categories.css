@@ -53,7 +53,11 @@
 }
 
 .categories button:hover {
-  background-color: rgb(196, 196, 196);
+  background-color: rgb(223, 223, 223);
+}
+
+.categories .selected {
+  background-color: rgb(190, 190, 190);
 }
 
 @media (min-width: 600px) {
