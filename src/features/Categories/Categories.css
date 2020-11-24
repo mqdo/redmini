@@ -56,11 +56,12 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  width: 100%;
+  width: 86%;
+  border-radius: 1rem;
 }
 
 .categories button img {
-  max-width: 12%;
+  max-width: 15%;
   border-radius: 100%;
   display: block;
   margin: 3% auto;
@@ -72,6 +73,22 @@
 
 .categories .selected {
   background-color: rgb(190, 190, 190);
+}
+
+.categories .loading {
+  transform: rotate(90deg);
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.categories button:active {
+  box-sizing: border-box;
+  border: 0.3rem solid rgb(223, 223, 223);
+  font-weight: 700;
+}
+
+.categories button:active img {
+  max-width: 18%;
 }
 
 @media (min-width: 600px) {
@@ -116,5 +133,11 @@
     margin-right: 12%;
   }
 
-  .categories::-webkit-scrollbar { width: .15rem !important }
+  .categories::-webkit-scrollbar {
+    width: 0.6rem !important;
+  }
+
+  .categories::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.055);
+  }
 }

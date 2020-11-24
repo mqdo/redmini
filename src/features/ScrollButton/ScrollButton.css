@@ -1,0 +1,21 @@
+.scroll {
+  border-radius: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  border: transparent;
+  outline: none;
+  background-color: transparent;
+  position: fixed;
+  left: 1rem;
+  bottom: 2rem;
+  color: rgba(153, 153, 153, 0.432);
+}
+
+.scroll:hover {
+  color: rgb(153, 153, 153);
+}
+
+.scroll span {
+  font-size: 3.2rem;
+}

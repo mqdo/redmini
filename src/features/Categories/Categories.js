@@ -3,7 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 
 import "./Categories.css";
 import { changeActive } from "../Main/redpostSlice";
-import { fetchCats } from "../Main/categoriesSlice";
+import { fetchCats } from "./categoriesSlice";
+
+import loading from "../../Ellipsis.svg";
 
 export const Categories = () => {
   const dispatch = useDispatch();
@@ -22,22 +24,28 @@ export const Categories = () => {
     <div className="categories">
       <p>Subreddits</p>
       <div className="items animated menu">
-        {category.map((sub) => {
-          return (
-            <button
-              key={sub.data.display_name_prefixed}
-              className={
-                sub.data.display_name_prefixed === active ? "selected" : "non"
-              }
-              onClick={() => {
-                dispatch(changeActive(sub.data.display_name_prefixed));
-              }}
-            >
-              <img src={sub.data.icon_img} alt="" />
-              {sub.data.display_name_prefixed}
-            </button>
-          );
-        })}
+        {(status === "succeeded" &&
+          category.map((sub) => {
+            return (
+              <button
+                key={sub.data.display_name_prefixed}
+                className={
+                  sub.data.display_name_prefixed === active ? "selected" : "non"
+                }
+                onClick={() => {
+                  if (sub.data.display_name_prefixed !== active) {
+                    dispatch(changeActive(sub.data.display_name_prefixed));
+                  }
+                }}
+              >
+                <img src={sub.data.icon_img} alt="" />
+                <span>{sub.data.display_name_prefixed}</span>
+              </button>
+            );
+          })) ||
+          (status === "loading" && (
+            <img src={loading} alt="loading" className="loading" />
+          ))}
       </div>
     </div>
   );

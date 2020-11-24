@@ -14,7 +14,11 @@ function App() {
       <Main />
       <div className="footer">
         <p>
-          Redmini by <a href="https://github.com/mqdo">mquan</a>.
+          Redmini by{" "}
+          <a href="https://github.com/mqdo" target="_blank" rel="noreferrer">
+            mquan
+          </a>
+          .
         </p>
       </div>
     </Provider>

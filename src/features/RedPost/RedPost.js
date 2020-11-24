@@ -5,6 +5,7 @@ import "./RedPost.css";
 import { fetchPosts } from "../Main/redpostSlice";
 
 import { formatTime, formatNum } from "../../formatIndex";
+import { scrollToTop } from "../../scrollToTop";
 
 import loading from "../../Ellipsis.svg";
 import fail from "../../fail.png";
@@ -20,12 +21,12 @@ export const RedPost = () => {
     if (status === "idle") {
       dispatch(fetchPosts(active));
     }
-    window.scrollTo(0, 0);
+    scrollToTop();
   }, [active, status, dispatch]);
 
   return (
     <div className="container">
-      {(active === "" && (
+      {(status === "succeeded" && posts.length === 0 && (
         <div className="failed">
           <img src={fail} alt="" />
           <h2>Opps! There is no post...</h2>

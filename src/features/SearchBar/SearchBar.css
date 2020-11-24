@@ -45,13 +45,21 @@
   overflow: hidden;
   text-overflow: "";
   border-radius: 1rem;
+  font-size: 1.2rem;
 }
 
 .bar input:focus {
+  display: block;
+  float: left;
+  clear: both;
   width: 100%;
   outline: none;
   margin-right: 15%;
   background-color: rgba(196, 196, 196, 0.116);
+}
+
+.bar button {
+  padding-top: 0.3rem;
 }
 
 @media (min-width: 600px) {
@@ -76,11 +84,6 @@
     padding: 3%;
     margin-right: 15%;
     background-color: rgba(196, 196, 196, 0.116);
-  }
-
-  
-  .bar button {
-    padding-top: .3rem;
   }
 }
 
