@@ -23,7 +23,7 @@ export const searchPosts = createAsyncThunk(
 export const redpostSlice = createSlice({
   name: "redposts",
   initialState: {
-    active: "/r/scifi",
+    active: "/r/funny",
     posts: [],
     status: "idle",
     error: null,

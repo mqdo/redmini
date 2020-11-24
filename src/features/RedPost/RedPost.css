@@ -13,7 +13,7 @@
   align-items: center;
   gap: .1rem;
   background-color: rgba(196, 196, 196, 0.062);
-  border-radius: 3%;
+  border-radius: 1rem;
 }
 
 .posts p {
@@ -75,7 +75,7 @@
   min-width: 0;
   min-height: 0;
   background-color: white;
-  border-radius: 3%;
+  border-radius: 1rem;
   margin-right: 2%;
   box-sizing: border-box;
   padding: 4%;
@@ -90,7 +90,7 @@
 .article img {
   max-width: 100%;
   height: auto;
-  border-radius: 2%;
+  border-radius: 1rem;
 }
 
 .loading,

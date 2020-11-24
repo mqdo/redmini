@@ -37,20 +37,21 @@
 
 .bar input {
   display: block;
-  width: .1%;
+  width: 0.1%;
   padding: 3%;
   border: none;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: '';
-
+  text-overflow: "";
+  border-radius: 1rem;
 }
 
 .bar input:focus {
   width: 100%;
   outline: none;
   margin-right: 15%;
+  background-color: rgba(196, 196, 196, 0.116);
 }
 
 @media (min-width: 600px) {
@@ -75,6 +76,11 @@
     padding: 3%;
     margin-right: 15%;
     background-color: rgba(196, 196, 196, 0.116);
+  }
+
+  
+  .bar button {
+    padding-top: .3rem;
   }
 }
 
