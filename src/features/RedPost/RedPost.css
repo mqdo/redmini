@@ -42,6 +42,10 @@
   color: blue;
 }
 
+.cmt {
+  cursor: pointer;
+}
+
 .cmt:active {
   color: gray;
 }

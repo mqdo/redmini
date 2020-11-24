@@ -50,6 +50,7 @@
   border: none;
   outline: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .categories button:hover {
@@ -72,8 +73,8 @@
   }
 
   .categories .items {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    display: block;
   }
 
   .categories:hover .animated,
@@ -83,6 +84,8 @@
 
   .categories button {
     padding: 8%;
+    display: block;
+    margin: 0 auto;
   }
 
   .categories p {

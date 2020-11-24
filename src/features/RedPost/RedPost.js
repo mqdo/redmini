@@ -20,44 +20,51 @@ export const RedPost = () => {
     if (status === "idle") {
       dispatch(fetchPosts(active));
     }
+    window.scrollTo(0, 0);
   }, [active, status, dispatch]);
 
   return (
     <div className="container">
-      {(status === "succeeded" &&
-        posts.map((post) => {
-          return (
-            <div className="posts" key={posts.indexOf(post)}>
-              <div className="votes">
-                <button className="arrow-up">
-                  <i className="material-icons">expand_less</i>
-                </button>
-                <p>{formatNum(parseInt(post.data.ups))}</p>
-                <button className="arrow-down">
-                  <i className="material-icons">expand_more</i>
-                </button>
+      {(active === "" && (
+        <div className="failed">
+          <img src={fail} alt="" />
+          <h2>Opps! There is no post...</h2>
+        </div>
+      )) ||
+        (status === "succeeded" &&
+          posts.map((post) => {
+            return (
+              <div className="posts" key={posts.indexOf(post)}>
+                <div className="votes">
+                  <button className="arrow-up">
+                    <i className="material-icons">expand_less</i>
+                  </button>
+                  <p>{formatNum(parseInt(post.data.ups))}</p>
+                  <button className="arrow-down">
+                    <i className="material-icons">expand_more</i>
+                  </button>
+                </div>
+                <div className="status posted">
+                  <p>Posted by r/{post.data.author}</p>
+                </div>
+                <div className="status time">
+                  <p>{formatTime(post.data.created_utc)}</p>
+                </div>
+                <div className="comment">
+                  <button className="cmt">
+                    <i className="material-icons">comment</i>
+                  </button>
+                </div>
+                <div className="article">
+                  <h2>{post.data.title}</h2>
+                  {(post.data.url.search("jpg") > 0 ||
+                    post.data.url.search("png") > 0) && (
+                    <img src={post.data.url} alt={post.data.title} />
+                  )}
+                </div>
               </div>
-              <div className="status posted">
-                <p>Posted by r/{post.data.author}</p>
-              </div>
-              <div className="status time">
-                <p>{formatTime(post.data.created_utc)}</p>
-              </div>
-              <div className="comment">
-                <button className="cmt">
-                  <i className="material-icons">comment</i>
-                </button>
-              </div>
-              <div className="article">
-                <h2>{post.data.title}</h2>
-                {(post.data.url.search("jpg") > 0 ||
-                  post.data.url.search("png") > 0) && (
-                  <img src={post.data.url} alt={post.data.title} />
-                )}
-              </div>
-            </div>
-          );
-        })) ||
+            );
+          })) ||
         (status === "loading" && (
           <div className="loading">
             <img src={loading} alt="" />

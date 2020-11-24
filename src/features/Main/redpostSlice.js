@@ -3,8 +3,17 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const fetchPosts = createAsyncThunk(
   "redposts/fetchPosts",
   async (url) => {
+    const response = await fetch(`https://www.reddit.com/${url}.json`);
+    const jsonResponse = await response.json();
+    return jsonResponse.data.children;
+  }
+);
+
+export const searchPosts = createAsyncThunk(
+  "redposts/searchPosts",
+  async (value) => {
     const response = await fetch(
-      `https://www.reddit.com/${url}.json`
+      `https://www.reddit.com/search.json?q=${value}&restrict_sr=on`
     );
     const jsonResponse = await response.json();
     return jsonResponse.data.children;
@@ -14,7 +23,7 @@ export const fetchPosts = createAsyncThunk(
 export const redpostSlice = createSlice({
   name: "redposts",
   initialState: {
-    active: "/r/pics",
+    active: "/r/scifi",
     posts: [],
     status: "idle",
     error: null,
@@ -35,6 +44,19 @@ export const redpostSlice = createSlice({
       state.posts = state.posts.concat(action.payload);
     },
     [fetchPosts.rejected]: (state, action) => {
+      state.status = "failed";
+      state.error = action.error.message;
+    },
+    [searchPosts.pending]: (state, action) => {
+      state.status = "loading";
+      state.posts = [];
+    },
+    [searchPosts.fulfilled]: (state, action) => {
+      state.status = "succeeded";
+      state.posts = state.posts.concat(action.payload);
+      state.active = "";
+    },
+    [searchPosts.rejected]: (state, action) => {
       state.status = "failed";
       state.error = action.error.message;
     },

@@ -27,26 +27,30 @@
   min-width: 5%;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 .bar i {
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .bar input {
   display: block;
-  width: 10%;
+  width: .1%;
   padding: 3%;
   border: none;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: '';
+
 }
 
 .bar input:focus {
   width: 100%;
   outline: none;
+  margin-right: 15%;
 }
 
 @media (min-width: 600px) {
@@ -69,6 +73,7 @@
   .bar input {
     width: 100%;
     padding: 3%;
+    margin-right: 15%;
     background-color: rgba(196, 196, 196, 0.116);
   }
 }
@@ -84,7 +89,7 @@
   }
 
   .bar .search-bar {
-    min-width: 30%;
+    max-width: 100%;
   }
 
   .bar i {
