@@ -12,6 +12,7 @@
 .bar img {
   max-width: 50%;
   height: auto;
+  cursor: pointer;
 }
 
 .bar .search-bar {
@@ -45,7 +46,7 @@
   overflow: hidden;
   text-overflow: "";
   border-radius: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .bar input:focus {
@@ -68,7 +69,7 @@
   }
 
   .bar img {
-    max-width: 30%;
+    max-width: 12rem;
   }
 
   .bar .search-bar {
@@ -94,7 +95,7 @@
   }
 
   .bar img {
-    max-width: 20%;
+    max-width: 15rem;
   }
 
   .bar .search-bar {
@@ -108,5 +109,10 @@
   .bar input {
     width: 100%;
     padding: 2.3%;
+  }
+
+  .bar input:hover {
+    border: thin solid;
+    background-color: white;
   }
 }

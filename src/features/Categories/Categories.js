@@ -33,9 +33,7 @@ export const Categories = () => {
                   sub.data.display_name_prefixed === active ? "selected" : "non"
                 }
                 onClick={() => {
-                  if (sub.data.display_name_prefixed !== active) {
-                    dispatch(changeActive(sub.data.display_name_prefixed));
-                  }
+                  dispatch(changeActive(sub.data.display_name_prefixed));
                 }}
               >
                 <img src={sub.data.icon_img} alt="" />

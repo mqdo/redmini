@@ -5,6 +5,7 @@
   border-top: outset;
   text-align: center;
   background-color: rgb(196, 196, 196, 0.062);
+  word-wrap: break-word;
 }
 
 .categories p {
@@ -46,7 +47,7 @@
 }
 
 .categories button {
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 5%;
   line-height: 0.9;
   border: none;
@@ -56,7 +57,7 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  width: 86%;
+  width: 50%;
   border-radius: 1rem;
 }
 
@@ -73,12 +74,14 @@
 
 .categories .selected {
   background-color: rgb(190, 190, 190);
+  font-size: 1rem;
 }
 
 .categories .loading {
   transform: rotate(90deg);
   max-width: 50%;
   max-height: 50%;
+  padding: 10%;
 }
 
 .categories button:active {
@@ -98,11 +101,18 @@
     border-top: none;
     border-left: outset;
     border-bottom: inset;
-    margin: 0 1%;
-    height: 88vh;
+    margin: 0 1% 1% 1%;
+    height: 60vh;
     overflow-x: hidden;
     overflow-y: auto;
     border-radius: 1rem 0 0 1rem;
+    position: fixed;
+    right: 0;
+    opacity: 0.5;
+  }
+
+  .categories:hover {
+    opacity: 1;
   }
 
   .categories .items {
@@ -116,9 +126,15 @@
   }
 
   .categories button {
+    width: 86%;
     padding: 8%;
     display: block;
     margin: 0 auto;
+    font-size: 0.7rem;
+  }
+
+  .categories .selected {
+    font-size: 0.75rem;
   }
 
   .categories p {
@@ -131,6 +147,7 @@
   .categories {
     width: 15%;
     margin-right: 12%;
+    height: 80vh;
   }
 
   .categories::-webkit-scrollbar {

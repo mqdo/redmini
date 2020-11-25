@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import "./SearchBar.css";
 import logo from "../../logo.png";
-import { searchPosts } from "../Main/redpostSlice";
+import { searchPosts, fetchPosts } from "../Main/redpostSlice";
 
 export const SearchBar = () => {
   const dispatch = useDispatch();
@@ -14,13 +14,13 @@ export const SearchBar = () => {
     setValue(target.value);
   };
 
-  const handleKeyUp = e => {
+  const handleKeyUp = (e) => {
     if (value && e.key === "Enter") {
       const val = value.split(" ");
       dispatch(searchPosts(val.join("%20")));
       setValue("");
     }
-  }
+  };
 
   const handleClick = (e) => {
     if (value) {
@@ -30,9 +30,16 @@ export const SearchBar = () => {
     }
   };
 
+  let active = useSelector((state) => state.redposts.active);
+
   return (
     <div className="bar">
-      <img title="logo" src={logo} alt="redmini" />
+      <img
+        title="logo"
+        src={logo}
+        alt="redmini"
+        onClick={() => dispatch(fetchPosts(active))}
+      />
       <div className="search-bar">
         <input
           type="text"
