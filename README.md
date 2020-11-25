@@ -6,11 +6,11 @@ I make this after taking the front-end course on the site. It is my very first w
 ## Preview
 
 ![Redmini first look](./preview/redmini-1.png)\
-First look of the web-app.\
+*First look of the web-app.*\
 ![Redmini first look](./preview/redmini-2.png)\
-When reading comments...\
+*When reading comments...*\
 ![Redmini first look](./preview/redmini-responsive.png)\
-And responsive in devices such as mobile or tablet.\
+*And responsive in devices such as mobile or tablet.*
 
 ## Technologies used
 
