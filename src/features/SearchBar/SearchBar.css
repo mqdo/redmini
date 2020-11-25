@@ -1,4 +1,4 @@
-.bar {
+header {
   width: 100%;
   max-height: 30%;
   padding: 0 2%;
@@ -9,19 +9,19 @@
   border-bottom: inset;
 }
 
-.bar img {
+header img {
   max-width: 50%;
   height: auto;
   cursor: pointer;
 }
 
-.bar .search-bar {
+header .search-bar {
   display: flex;
   justify-content: flex-end;
   box-sizing: border-box;
 }
 
-.bar button {
+header button {
   position: absolute;
   color: grey;
   background-color: transparent;
@@ -31,12 +31,12 @@
   cursor: pointer;
 }
 
-.bar i {
+header i {
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-.bar input {
+header input {
   display: block;
   width: 0.1%;
   padding: 3%;
@@ -49,7 +49,7 @@
   font-size: 1.1rem;
 }
 
-.bar input:focus {
+header input:focus {
   display: block;
   float: left;
   clear: both;
@@ -59,28 +59,28 @@
   background-color: rgba(196, 196, 196, 0.116);
 }
 
-.bar button {
+header button {
   padding-top: 0.3rem;
 }
 
 @media (min-width: 600px) {
-  .bar {
+  header {
     max-height: 30%;
   }
 
-  .bar img {
+  header img {
     max-width: 12rem;
   }
 
-  .bar .search-bar {
+  header .search-bar {
     min-width: 40%;
   }
 
-  .bar i {
+  header i {
     font-size: 1.8rem;
   }
 
-  .bar input {
+  header input {
     width: 100%;
     padding: 3%;
     margin-right: 15%;
@@ -89,29 +89,29 @@
 }
 
 @media (min-width: 1024px) {
-  .bar {
+  header {
     max-height: 20%;
     padding: 0 12%;
   }
 
-  .bar img {
+  header img {
     max-width: 15rem;
   }
 
-  .bar .search-bar {
+  header .search-bar {
     max-width: 100%;
   }
 
-  .bar i {
+  header i {
     font-size: 1.8rem;
   }
 
-  .bar input {
+  header input {
     width: 100%;
     padding: 2.3%;
   }
 
-  .bar input:hover {
+  header input:hover {
     border: thin solid;
     background-color: white;
   }

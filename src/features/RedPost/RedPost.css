@@ -1,6 +1,7 @@
 .container {
   margin-top: 1%;
   word-wrap: break-word;
+  min-height: 80vh;
 }
 
 .posts:hover {

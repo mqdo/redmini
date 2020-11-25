@@ -43,7 +43,9 @@ export const RedPost = () => {
               </button>
               <p>
                 {comments[0].data.children[0].data.ups === 0
-                  ? formatNum(-parseInt(comments[0].data.children[0].data.downs))
+                  ? formatNum(
+                      -parseInt(comments[0].data.children[0].data.downs)
+                    )
                   : formatNum(parseInt(comments[0].data.children[0].data.ups))}
               </p>
               <button className="arrow down">
@@ -104,6 +106,8 @@ export const RedPost = () => {
                         </div>
                       </div>
                     );
+                  // eslint-disable-next-line array-callback-return
+                  return;
                 })
               )}
             </div>

@@ -1,4 +1,4 @@
-.categories {
+aside {
   width: 100%;
   padding: 2% 0;
   box-sizing: border-box;
@@ -8,13 +8,13 @@
   word-wrap: break-word;
 }
 
-.categories p {
+aside p {
   margin: 1.6%;
   font-size: 1.1rem;
   font-weight: 700;
 }
 
-.categories .items {
+aside .items {
   position: absolute;
   left: 0;
   background-color: rgb(252, 252, 252);
@@ -22,14 +22,14 @@
   z-index: 10;
 }
 
-.categories:hover .animated {
+aside:hover .animated {
   display: block;
   margin: 2%;
   height: 50%;
   overflow: auto;
 }
 
-.categories .menu {
+aside .menu {
   animation: growDown 300ms ease-in-out forwards;
   transform-origin: top center;
 }
@@ -46,7 +46,7 @@
   }
 }
 
-.categories button {
+aside button {
   font-size: 0.9rem;
   padding: 5%;
   line-height: 0.9;
@@ -61,41 +61,41 @@
   border-radius: 1rem;
 }
 
-.categories button img {
+aside button img {
   max-width: 15%;
   border-radius: 100%;
   display: block;
   margin: 3% auto;
 }
 
-.categories button:hover {
+aside button:hover {
   background-color: rgb(223, 223, 223);
 }
 
-.categories .selected {
+aside .selected {
   background-color: rgb(190, 190, 190);
   font-size: 1rem;
 }
 
-.categories .loading {
+aside .loading {
   transform: rotate(90deg);
   max-width: 50%;
   max-height: 50%;
   padding: 10%;
 }
 
-.categories button:active {
+aside button:active {
   box-sizing: border-box;
   border: 0.3rem solid rgb(223, 223, 223);
   font-weight: 700;
 }
 
-.categories button:active img {
+aside button:active img {
   max-width: 18%;
 }
 
 @media (min-width: 600px) {
-  .categories {
+  aside {
     float: right;
     width: 21%;
     border-top: none;
@@ -111,21 +111,21 @@
     opacity: 0.5;
   }
 
-  .categories:hover {
+  aside:hover {
     opacity: 1;
   }
 
-  .categories .items {
+  aside .items {
     width: 100%;
     display: block;
   }
 
-  .categories:hover .animated,
-  .categories .menu {
+  aside:hover .animated,
+  aside .menu {
     all: unset;
   }
 
-  .categories button {
+  aside button {
     width: 86%;
     padding: 8%;
     display: block;
@@ -133,28 +133,28 @@
     font-size: 0.7rem;
   }
 
-  .categories .selected {
+  aside .selected {
     font-size: 0.75rem;
   }
 
-  .categories p {
+  aside p {
     text-align: center;
     margin: 3%;
   }
 }
 
 @media (min-width: 1024px) {
-  .categories {
+  aside {
     width: 15%;
     margin-right: 12%;
     height: 80vh;
   }
 
-  .categories::-webkit-scrollbar {
+  aside::-webkit-scrollbar {
     width: 0.6rem !important;
   }
 
-  .categories::-webkit-scrollbar-thumb {
+  aside::-webkit-scrollbar-thumb {
     background: rgba(136, 136, 136, 0.055);
   }
 }

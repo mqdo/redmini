@@ -21,7 +21,7 @@ export const Categories = () => {
   }, [status, dispatch]);
 
   return (
-    <div className="categories">
+    <aside>
       <p>Subreddits</p>
       <div className="items animated menu">
         {(status === "succeeded" &&
@@ -45,6 +45,6 @@ export const Categories = () => {
             <img src={loading} alt="loading" className="loading" />
           ))}
       </div>
-    </div>
+    </aside>
   );
 };

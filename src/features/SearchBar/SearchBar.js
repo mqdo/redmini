@@ -33,7 +33,7 @@ export const SearchBar = () => {
   let active = useSelector((state) => state.redposts.active);
 
   return (
-    <div className="bar">
+    <header>
       <img
         title="logo"
         src={logo}
@@ -55,6 +55,6 @@ export const SearchBar = () => {
           </label>
         </button>
       </div>
-    </div>
+    </header>
   );
 };

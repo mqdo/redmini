@@ -6,10 +6,10 @@ import { ScrollButton } from "../ScrollButton/ScrollButton";
 
 export const Main = () => {
   return (
-    <div className="main-page">
+    <main>
       <Categories />
       <RedPost />
       <ScrollButton />
-    </div>
+    </main>
   );
 };

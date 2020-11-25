@@ -12,7 +12,7 @@ function App() {
     <Provider store={store}>
       <SearchBar />
       <Main />
-      <div className="footer">
+      <footer>
         <p>
           Redmini by{" "}
           <a href="https://github.com/mqdo" target="_blank" rel="noreferrer">
@@ -20,7 +20,7 @@ function App() {
           </a>
           .
         </p>
-      </div>
+      </footer>
     </Provider>
   );
 }
